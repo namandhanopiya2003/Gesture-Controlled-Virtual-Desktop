@@ -22,47 +22,47 @@
 
 ## 📁 PROJECT FOLDER STRUCTURE ==>
 
-main_folder/
-│
-├── main.py                         # Main entry point to run the app
-├── requirements.txt                # All dependencies
-├── README.md                       # Project overview and setup guide
-├── record_gesture_data.py
-├── ui_manager.py
-│
-├── models/
-│   ├── gesture_classifier.pkl      # Trained gesture classification model
-│   └── depth_model/                # Pretrained MonoDepth2 model (optional download)
-│
-├── modules/
-│   ├── gesture_detection.py        # Detects gestures using landmarks
-│   ├── depth_estimation.py         # Gets hand depth using MonoDepth2
-│   ├── hand_tracking.py            # MediaPipe-based real-time hand tracking
-│   ├── analytics_logger.py         # Logs gestures, app usage, session stats
-│   └── gpt_assistant.py            # Optional: GPT integration (OpenAI API)
-│
-├── utils/
-│   ├── data_preprocessing.py       # Prepares data for training/classification
-│   ├── plot_utils.py               # Functions for session visualizations
-│   └── config.py                   # Config variables (paths, thresholds, etc.)
-│
-├── data/
-│   ├── raw_landmarks/              # Raw landmark data from training
-│   └── processed/                  # Processed data for model training
-│
-├── logger/
-│   └── low_confidence_logger.py
-│
-├── logs/
-│   ├── confidence_before.csv
-│   └── low_confidence_data.csv
-│
-├── ml/
-│   └──gesture_classifier.py
-│
-└── training/
-    ├── train_gesture_classifier.py # Trains scikit-learn model on gestures
-    ├── cluster_gestures.py         # Optional: KMeans or DBSCAN for gestures
+main_folder/<br>
+│<br>
+├── main.py                         # Main entry point to run the app<br>
+├── requirements.txt                # All dependencies<br>
+├── README.md                       # Project overview and setup guide<br>
+├── record_gesture_data.py<br>
+├── ui_manager.py<br>
+│<br>
+├── models/<br>
+│   ├── gesture_classifier.pkl      # Trained gesture classification model<br>
+│   └── depth_model/                # Pretrained MonoDepth2 model (optional download)<br>
+│<br>
+├── modules/<br>
+│   ├── gesture_detection.py        # Detects gestures using landmarks<br>
+│   ├── depth_estimation.py         # Gets hand depth using MonoDepth2<br>
+│   ├── hand_tracking.py            # MediaPipe-based real-time hand tracking<br>
+│   ├── analytics_logger.py         # Logs gestures, app usage, session stats<br>
+│   └── gpt_assistant.py            # Optional: GPT integration (OpenAI API)<br>
+│<br>
+├── utils/<br>
+│   ├── data_preprocessing.py       # Prepares data for training/classification<br>
+│   ├── plot_utils.py               # Functions for session visualizations<br>
+│   └── config.py                   # Config variables (paths, thresholds, etc.)<br>
+│<br>
+├── data/<br>
+│   ├── raw_landmarks/              # Raw landmark data from training<br>
+│   └── processed/                  # Processed data for model training<br>
+│<br>
+├── logger/<br>
+│   └── low_confidence_logger.py<br>
+│<br>
+├── logs/<br>
+│   ├── confidence_before.csv<br>
+│   └── low_confidence_data.csv<br>
+│<br>
+├── ml/<br>
+│   └──gesture_classifier.py<br>
+│<br>
+└── training/<br>
+    ├── train_gesture_classifier.py # Trains scikit-learn model on gestures<br>
+    ├── cluster_gestures.py         # Optional: KMeans or DBSCAN for gestures<br>
     └── analyze_sessions.py         # Creates EDA reports/heatmaps from logs
 
 ---
@@ -152,5 +152,6 @@ python main.py
 
 ## 📬 CONTACT ==>
 For questions or feedback, feel free to reach out!
+
 
 ---
