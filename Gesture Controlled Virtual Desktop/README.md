@@ -141,12 +141,12 @@ python main.py
 
 ## ✨ SAMPLE OUTPUT ==>
 
-🎥 Camera: ON
-🤖 Gesture: "SwipeRight" with 92.4% confidence
-⚠️ Logged gesture with 65.3% confidence (used for retraining)
-✅ Model improved and saved successfully.
-📊 Saved confidence plot to logs/confidence_comparison.png
-🧽 Deleted confidence plot image.
+🎥 Camera: ON<br>
+🤖 Gesture: "SwipeRight" with 92.4% confidence<br>
+⚠️ Logged gesture with 65.3% confidence (used for retraining<br>
+✅ Model improved and saved successfully.<br>
+📊 Saved confidence plot to logs/confidence_comparison.png<br>
+🧽 Deleted confidence plot image.<br>
 
 ---
 
@@ -155,3 +155,4 @@ For questions or feedback, feel free to reach out!
 
 
 ---
+
