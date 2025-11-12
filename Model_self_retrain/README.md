@@ -1,0 +1,1 @@
+This folder contains images illustrating how the model’s accuracy improved over time through self-training on low-confidence data.
