@@ -1,0 +1,1 @@
+This folder contains reference images that illustrate the correct execution of gestures required for the project.
