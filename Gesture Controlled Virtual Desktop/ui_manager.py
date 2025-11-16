@@ -1,32 +1,44 @@
+# Importing necessary modules
 from PyQt5 import QtWidgets, QtGui, QtCore
 import sys
 
+# Main desktop window class for gesture-controlled UI
 class GestureDesktopWindow(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
+
+        # Sets window title and size
         self.setWindowTitle("Gesture-Controlled Virtual Desktop")
         self.setGeometry(100, 100, 800, 600)
         self.setStyleSheet("background-color: #222;")
+
+        # Initial drawing settings
         self.pen_color = QtCore.Qt.green
         self.active_tool = None
         self.drawing = False
         self.last_point = None
 
+        # Canvas to draw gestures
         self.canvas = QtGui.QPixmap(self.width(), self.height())
         self.canvas.fill(QtCore.Qt.transparent)
 
+        # To display the canvas
         self.label = QtWidgets.QLabel(self)
         self.label.setPixmap(self.canvas)
         self.label.setGeometry(0, 0, self.width(), self.height())
 
+        # Label to display detected gesture name
         self.gesture_label = QtWidgets.QLabel(self)
         self.gesture_label.setGeometry(10, 10, 300, 30)
         self.gesture_label.setStyleSheet("color: white; font-size: 18px;")
 
         self.show()
 
+    # Triggers actions based on detected gesture
     def trigger_action(self, gesture):
         self.gesture_label.setText(f"Gesture: {gesture}")
+
+        # Maps gestures to UI actions 
         if gesture == "draw":
             self.active_tool = "draw"
         elif gesture == "tap":
@@ -38,6 +50,7 @@ class GestureDesktopWindow(QtWidgets.QWidget):
         elif gesture == "drag":
             self.pen_color = QtCore.Qt.yellow
 
+    # Draws a point or line on the canvas following the index finger
     def draw_point(self, x, y):
         if self.active_tool == "draw":
             painter = QtGui.QPainter(self.label.pixmap())
@@ -51,7 +64,7 @@ class GestureDesktopWindow(QtWidgets.QWidget):
         else:
             self.last_point = None
 
-
+    # Clears the entire canvas
     def clear_canvas(self):
           self.canvas = QtGui.QPixmap(self.width(), self.height())
           self.canvas.fill(QtCore.Qt.transparent)
